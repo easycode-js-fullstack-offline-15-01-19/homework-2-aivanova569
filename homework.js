@@ -49,9 +49,9 @@ let car = {
 };
 if (car.age > 5) {
 	console.log('Need Repair'),
-	needRepair = true;
+	car.needRepair = true;
 } else {
-	needRepair = false;
+	car.needRepair = false;
 };
 
 // ------------------------------ 4 -------------------------------
