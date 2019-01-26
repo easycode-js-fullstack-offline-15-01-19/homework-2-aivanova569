@@ -24,21 +24,23 @@
 // --------------------------- if elce ----------------------------
 // ------------------------------ 1 -------------------------------
 let x = 'hidden';
+
 if (x === 'hidden'){
 	x = 'visible';
 } else {
 	x ='hidden';
-};
+}
 
-// ------------------------------ 2 -------------------------------
+// ------------------------------ !2! -------------------------------
 let b = 0;
+
 if (b === 0) {
 	b = 1;
 } else if (b < 0) {
 	b = 'less then zero';
 } else {
-	b = b *10;
-};
+	b *= 10;
+}
 
 // ------------------------------ 3 -------------------------------
 let car = {
@@ -47,12 +49,13 @@ let car = {
 	create: 2008,
 	needRepair: false
 };
+
 if (car.age > 5) {
 	console.log('Need Repair'),
 	car.needRepair = true;
 } else {
 	car.needRepair = false;
-};
+}
 
 // ------------------------------ 4 -------------------------------
 let item = {
@@ -60,12 +63,13 @@ let item = {
 	price: '100$',
 	discount: '15%'
 };
+
 if (item.discount) {
 	item.priceWithDiscount = parseFloat(item.price) - parseFloat(item.price) * parseFloat(item.discount) / 100,
 	console.log(item.priceWithDiscount);
 } else {
 	console.log(item.price);
-};
+}
 
 // ------------------------------ 5 -------------------------------
 let product = {
@@ -79,11 +83,12 @@ if (parseFloat(product.price) >= min && parseFloat(product.price) <= max) {
   console.log(product.name);
 } else {
   console.log('Товаров не найдено');
-};
+}
 
 // //----------------- Тернарный оператор. Switch case ----------------
 // // ------------------------------ 1 --------------------------------
 let a = 'block';
+
 switch (a) {
 	case 'block':
 		console.log('block');
@@ -101,18 +106,20 @@ switch (a) {
 // ------------------------------ 2 --------------------------------
 // ----------------------------- 2.1 -------------------------------
 let y = 'hidden';
+
 y = (y === 'hidden') ? 'visible' : 'hidden';
 
 // ----------------------------- 2.2 -------------------------------
 let z = 0;
+
 z = (z === 0) ? 1 : (z < 0) ? 'less then zero' : z *10;
 
-// ----------------------------- 2.3 -------------------------------
+// ----------------------------- !2.3! -------------------------------
 let auto = {
 	name: 'Lexus',
 	age: 10,
 	create: 2008,
 	needRepair: false
 };
-auto.age = (auto.age > 5) ? (console.log('Need Repair'), auto.needRepair = true) : auto.needRepair = false;
 
+auto.needRepair = (auto.age > 5) ? (console.log('Need Repair'), true) : false;
